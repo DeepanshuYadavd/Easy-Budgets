@@ -6,11 +6,20 @@ import { deleteData } from "../Helper";
 import { toast } from "react-toastify";
 export const logOutAction = async () => {
   // delete the user:
-  deleteData("userName");
+  deleteData({
+    key: "userName",
+    id: null,
+  });
   // delete budget:
-  deleteData("budgets");
+  deleteData({
+    key: "budgets",
+    id: null,
+  });
   // dlete expenses:
-  deleteData("expenses");
+  deleteData({
+    key: "expenses",
+    id: null,
+  });
   // toaster:
   toast.success("User deleted successfully", {
     position: "top-center",

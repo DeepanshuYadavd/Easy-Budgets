@@ -31,7 +31,7 @@ const NavBar = ({ userName }) => {
       {userName && (
         <Form
           method="post"
-          action="/logout"
+          action="logout"
           onSubmit={(e) => {
             if (!confirm("Delete user and all data?")) {
               e.preventDefault();
